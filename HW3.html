@@ -1,0 +1,74 @@
+<!--
+GUI Assignment: Creating an Interactive Dynamic Table
+Description: Create a table completely dynamically based on parameters entered 
+in an HTML form. Create a form that accepts the starting and ending numbers for 
+both the horizontal (multiplier) and vertical (multiplicand) axes of a multiplication 
+table. Then use the numbers entered into the form to create a multiplication table 
+completely dynamically
+
+Peicai Chen, Peicai_Chen@student.uml.edu
+
+10/26/2021 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Multiplication Table</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/HW3.css" />
+    <meta name="keywords" content="Multiplication Table Page">
+    <meta name="created" content="2021-10-26">
+    <meta name="author" content="Peicai Chen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+</head>
+<body>
+    <h1 align="center"> Multiplication Table </h1>
+    <!--display input table-->
+    <div id = "group1">
+        <form >
+            <table id = "input">
+                <thead>Please enter the table ranges</thead>
+                <!-- input maxlength="3" -->
+                <tr>
+                    <th>Minimum Column Value</th>
+                    <td><input value="" id="Number1" maxlength="3"/></td>
+                    <span id="error"></span>
+
+                </tr>
+                <tr>
+                    <th>Maximum Column Value</th>
+                    <td><input value="" id="Number2" maxlength="3" /></td>
+                    <span id="error"></span>
+                    
+                </tr>
+                <tr>
+                    <th>Minimum Row Value</th>
+                    <td><input value="" id="Number3"maxlength="3"/></td>
+                    <span id="error"></span>
+                   
+                </tr>
+                <tr>
+                    <th>Maximum Row Value</th>
+                    <td><input value="" id="Number4"maxlength="3"/></td>
+                    <span id="error"></span>
+                   
+                </tr>
+                
+            </table>
+           
+        </form> 
+        
+    </div>
+    <!--print multiplication table-->
+    <div>
+        <table id = "MTable">
+            <input type="button" value="Regenerate Table" onclick=" callfunction()">
+        </table>
+    </div>
+    
+    
+    <script type="text/javascript" src="js/HW3.js"></script>
+    
+</body>
